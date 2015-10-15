@@ -5,7 +5,7 @@ description: A workspace to host pub packages
 homepage: https://github.com/flutter/engine/tree/master/sky/packages/workbench
 dependencies:
   sky: any
-  sky_tools: any
+  sky_tools: '0.0.17'
 dependency_overrides:
   material_design_icons:
     path: ../material_design_icons
