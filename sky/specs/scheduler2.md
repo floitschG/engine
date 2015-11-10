@@ -24,7 +24,7 @@ priority (that still fits the slice) and execute it.
 
 In its simplest form the implementation could resemble something like:
 
-```
+``` dart
 class Scheduler {
   // Uses the remaining idle-time to run tasks.
   void useIdleTime() {
@@ -97,7 +97,7 @@ We could make it easier for the programmer to cut its work-load into smaller
 pieces by using the async/await syntax. In this approach the scheduler would
 not invoke a callback, but complete a future:
 
-```
+``` dart
 void myLongRunningComputation() async {
   while (true) {
     doSomething();
@@ -109,7 +109,7 @@ void myLongRunningComputation() async {
 The scheduler would then return a future that is only completed when there is
 more time. There are many possibilities to improve this basic idea:
 
-```
+``` dart
 void myLongRunningComputation() async {
   while (true) {
     doSomething();
@@ -120,7 +120,7 @@ void myLongRunningComputation() async {
 
 ```
 
-```
+``` dart
 void myLongRunningComputation() async {
   while (true) {
     doSomething();
@@ -137,7 +137,7 @@ the scheduler could measure the time for one iteration, and use this as
 estimate for future iterations. Since devices don't run at the same speed this
 would allow much more flexibility.
 
-```
+``` dart
 void myLongRunningComputation() async {
   while (true) {
     doSomething();
